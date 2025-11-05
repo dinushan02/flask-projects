@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="profile-card">
+    <img src="{{ image_url }}" class="profile-img" alt="Profile Image" />
+    <h2>{{ username }}</h2>
+    <p class="role">AI Engineering Student</p>
+    <p class="bio">Lifelong learner passionate about Python, AI, and self-awareness.</p>
+    <div class="social-links">
+      <a href="#">🌐 Website</a>
+      <a href="#">🐦 Twitter</a>
+      <a href="#">📸 Instagram</a>
+    </div>
+    <a class="back-btn" href="{{ url_for('home') }}">⬅ Back to Home</a>
+    <a class="logout-btn" href="{{ url_for('logout') }}">🔓 Logout</a>
+  </div>
+</body>
+</html>

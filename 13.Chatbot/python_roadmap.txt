@@ -1,0 +1,9 @@
+Python Roadmap to become an AI Engineer:
+----------------------------------------
+1. Master Python basics and OOP
+2. Learn NumPy, Pandas, Matplotlib
+3. Study Machine Learning with Scikit-learn
+4. Dive into Deep Learning with TensorFlow or PyTorch
+5. Explore Data Engineering tools
+6. Work on real-world AI projects
+7. Build a portfolio and contribute to open-source

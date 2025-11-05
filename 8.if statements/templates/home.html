@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Status</title>
+</head>
+<body>
+    {% if logged_in %}
+        <h1>Welcome back!</h1>
+        <p>You are logged in.</p>
+    {% else %}
+        <h1>Hello!</h1>
+        <p>Please log in to continue.</p>
+    {% endif %}
+</body>
+</html>

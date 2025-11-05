@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teachers' Day Poster</title>
+    <style>
+        /* Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lora&display=swap');
+
+        /* Body background with smooth gradient */
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom right, #E0F2FE, #BAE6FD);
+            font-family: 'Lora', serif;
+        }
+
+        /* Poster container with 3D card effect */
+        .poster {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 50px 70px;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3),
+                        0 5px 15px rgba(0, 0, 0, 0.2) inset;
+            backdrop-filter: blur(10px);
+            max-width: 600px;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        /* Image styling */
+        .poster img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 6px solid #FFD700; /* Golden ring */
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
+        }
+
+        /* Main text */
+        .main-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            color: #1E3A8A; /* Deep Blue */
+            font-weight: bold;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .main-text span {
+            color: #FFD700; /* Golden highlight */
+            text-shadow: 0 0 12px rgba(255, 215, 0, 0.8);
+        }
+
+        /* Subtext */
+        .sub-text {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            color: #8B5CF6; /* Spiritual Violet */
+            font-weight: 600;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="poster">
+        <!-- Replace with your own Arutperunjothi image in /static -->
+        <img src="{{ url_for('static', filename='arutperunjothi.png') }}" alt="Arutperunjothi">
+        <h1 class="main-text">✨ The Best Teacher is God — <span>Arutperunjothi</span> ✨</h1>
+        <p class="sub-text">Happy Teachers’ Day 🙏</p>
+    </div>
+</body>
+</html>

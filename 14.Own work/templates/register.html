@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Register - Codex Academy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<header>
+    <nav>
+        <h2 class="logo">Codex <span>Academy</span></h2>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="signin-container fade-in">
+    <div class="signin-box">
+        <h1>Create Account</h1>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+              <div class="flash {{ category }}">{{ message }}</div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+
+        <form method="POST">
+            <input type="email" name="email" placeholder="Email" required><br>
+            <div class="password-wrap">
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <span class="toggle-password" onclick="togglePassword()">👁️</span>
+            </div><br>
+            <button type="submit">Register</button>
+        </form>
+        <div class="signin-links">
+            <a href="/signin">Already have an account? Sign In</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Codex Academy. All rights reserved.</p>
+</footer>
+
+<script>
+function togglePassword() {
+    var x = document.getElementById("password");
+    x.type = (x.type === "password") ? "text" : "password";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Course Chatbot Web App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>👋 Hi! I'm your learning assistant bot</h1>
+        
+        <form method="POST">
+            <label for="course">What course do you like?</label>
+            <select id="course" name="course" required onchange="showRoadmapOption(this.value)">
+                <option value="">--Choose a course--</option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+                <option value="C++">C++</option>
+            </select>
+
+            <div id="roadmapOption" style="display:none;">
+                <label>Do you want the roadmap to become an AI Engineer?</label>
+                <input type="radio" name="roadmap" value="yes" required> Yes
+                <input type="radio" name="roadmap" value="no" required> No
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        {% if message %}
+            <div class="response">
+                <p>{{ message }}</p>
+            </div>
+        {% endif %}
+
+        {% if roadmap %}
+            <div class="roadmap">
+                <h3>📚 Python Roadmap:</h3>
+                <pre>{{ roadmap }}</pre>
+            </div>
+        {% endif %}
+    </div>
+
+    <script>
+        function showRoadmapOption(value) {
+            document.getElementById('roadmapOption').style.display = (value === 'Python') ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>

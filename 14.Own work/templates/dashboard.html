@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Dashboard - Codex Academy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<header>
+    <nav>
+        <h2 class="logo">Codex <span>Academy</span></h2>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+        <a href="/logout"><button>Logout</button></a>
+    </nav>
+</header>
+
+<div class="dashboard-container fade-in">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="flash {{ category }}">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <h1>Welcome, {{ email }}!</h1>
+    <p>This is your personal dashboard. You can see your enrolled courses and progress here.</p>
+</div>
+
+<footer>
+    <p>&copy; 2025 Codex Academy. All rights reserved.</p>
+</footer>
+</body>
+</html>

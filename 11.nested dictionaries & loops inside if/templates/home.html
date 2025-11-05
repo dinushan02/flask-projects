@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Projects</title>
+</head>
+<body>
+    <h1>{{ user.name }}'s Projects</h1>
+
+    {% if show %}
+        <ul>
+            {% for project in user.projects %}
+                <li>
+                    <strong>{{ project.title }}</strong> - {{ project.status }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No projects to show.</p>
+    {% endif %}
+
+    <p><a href="{{ url_for('about') }}">Go to About Page</a></p>
+</body>
+</html>

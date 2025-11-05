@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Success</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #f7f9fc;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        color: #333;
+    }
+    h3 {
+        font-size: 24px;
+        color: #2c3e50;
+        margin-bottom: 25px;
+    }
+    table {
+        border-collapse: collapse;
+        width: 360px;
+        background: #ffffff;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    td {
+        padding: 15px 20px;
+        border-bottom: 1px solid #e6ecf1;
+    }
+    tr:last-child td {
+        border-bottom: none;
+    }
+    td:first-child {
+        font-weight: 600;
+        background: #f0f4f8;
+        width: 40%;
+        color: #34495e;
+    }
+    td:last-child {
+        color: #2c3e50;
+    }
+    @media (max-width: 420px) {
+        table {
+            width: 90%;
+        }
+    }
+</style>
+</head>
+<body>
+<h3>Registration Success</h3>
+<table>
+    <tr>
+        <td>Name</td><td>{{name}}</td>
+    </tr>
+    <tr>
+        <td>Age</td><td>{{age}}</td>
+    </tr>
+    <tr>
+        <td>City</td><td>{{city}}</td>
+    </tr>
+</table>
+</body>
+</html>

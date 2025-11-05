@@ -1,0 +1,12 @@
+CREATE DATABASE MyFlaskDB;
+GO
+
+USE MyFlaskDB;
+GO
+
+CREATE TABLE Users (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    email NVARCHAR(100),
+    password NVARCHAR(100)
+);
+GO
