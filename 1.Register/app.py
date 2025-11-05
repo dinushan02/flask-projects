@@ -1,5 +1,5 @@
 """from flask import Flask,render_template,request
-# Initialize flask app
+# Initialize flask app development
 app=Flask(__name__)
 
 @app.route('/')
